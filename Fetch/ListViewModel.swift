@@ -47,7 +47,7 @@ class ListViewModel: ObservableObject, Identifiable {
         Iterates through the json array, creates json objects as it loops, and appends each json object to the corresponding @Published list
         If the name is empty, then that means the name was listed as null or an empty string, which is what we want to filter out
         This is a quicker approach than using multiple filters over the full list to separate the lists and filter out the empty/null names
-        Also, this function is run before the closure of the Alamofire request, and is done asynchronously
+        Also, this function is run before the closure of the Alamofire request
      */
     func addItemsToList(json: JSON) {
         for (_, item) in json {
@@ -73,7 +73,7 @@ class ListViewModel: ObservableObject, Identifiable {
     
     /**
         Sort lists based on the comparable function in the ItemModel
-        This function is run before the closure of the Alamofire request and is done asynchronously
+        This function is run before the closure of the Alamofire request
      */
     func sortLists() {
         listIdOne.sort()
